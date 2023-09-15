@@ -1,0 +1,43 @@
+{
+  "name": "new-components",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "ls && vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf node_modules yarn.lock package-lock.json dist && yarn",
+    "go": "npm link @frontend/frontendfoundation && yarn start",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
+    "prepare": "husky install",
+    "deploy": "npm run build; cp dist/index.html dist/200.html; surge dist ga-backoffice.surge.sh"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/loadable__component": "^5.13.5",
+    "antd": "^5.9.0",
+    "axios": "^1.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-geetest-v4": "^1.1.1",
+    "react-i18next": "^13.2.2",
+    "react-redux": "^8.1.2",
+    "react-router-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "@loadable/component": "^5.15.3",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "sass": "^1.67.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}
